@@ -11,8 +11,17 @@ namespace ibarra_tan_james{
         void budget() const;
         void current()  const;
         friend personalFinance operator+(const personalFinance& s1, const personalFinance& s2);
-
-
+        void get_salary();
+        void get_real_estate();
+        void get_checking_account();
+        void get_savings_account();
+        void get_retirement_account();
+        void get_mortgages();
+        void get_credit_card_debt();
+        void get_personal_loans();
+        void get_student_loans();
+        void get_auto_loans();
+        void get_all_data(); 
         private:
         double salary;
         //Assets

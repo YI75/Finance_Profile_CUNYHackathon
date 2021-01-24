@@ -42,14 +42,14 @@ namespace ibarra_tan_james{
       cout<< "A possible budget to achieve your money goals includes:"<<endl;
       cout<< "$"<<round(salary*0.4)<< " on needs such as rent, food, and other biils."<<endl;
       cout<< "$"<<round(salary*0.4)<<" on savings accounts, investments, and mostly to tackle debt."<<endl;
-      cout<< "$"<<round(salary*0.2) <<" on any items that are not needed like eating out or a new video game."<<endl;
+      cout<< "$"<<round(salary*0.2) <<" on any items that are not needed like eating out or a new video game."<<endl<<endl;
     }
 
     void personalFinance::current() const
     {
       cout<<"Salary: $" << salary << endl;
       cout<<"Assets: $" << sum_assets << endl;
-      cout<<"Liabilites: $"<< sum_liabilities << endl;
+      cout<<"Liabilites: $"<< sum_liabilities << endl<<endl;
     }
 
 

@@ -8,7 +8,7 @@ namespace ibarra_tan_james{
         personalFinance();
         double net_worth const;
         void budget const;
-
+        void hello const;
 
 
         private:

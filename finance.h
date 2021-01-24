@@ -7,8 +7,8 @@ namespace ibarra_tan_james{
         public:
         personalFinance();
         double round(double value);
-        double net_worth() const;
-        void budget() const;
+        double net_worth();
+        void budget();
         void current()  const;
         friend personalFinance operator+(const personalFinance& s1, const personalFinance& s2);
         void get_salary();
@@ -21,7 +21,7 @@ namespace ibarra_tan_james{
         void get_personal_loans();
         void get_student_loans();
         void get_auto_loans();
-        void get_all_data(); 
+        void get_all_data();
         private:
         double salary;
         //Assets
@@ -37,6 +37,6 @@ namespace ibarra_tan_james{
         double personal_loans;
         double student_loans;
         double auto_loans;
-    }
+    };
 }
 #endif

@@ -9,5 +9,9 @@ using namespace std;
 
 int main()
 {
-
+  personalFinance test;
+  test.get_all_data();
+  test.net_worth();
+  test.budget();
+  test.current();
 }

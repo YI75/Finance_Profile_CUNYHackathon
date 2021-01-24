@@ -26,30 +26,34 @@ namespace ibarra_tan_james{
 
     double personalFinance::round(double value) // function that rounds value to 2 decimal places
     {
-      double rounded = ceil(value * 100.0) / 100.0;
-      return rounded;
+      double rounded = (int)(value*100 + 0.5);
+      return (double)rounded/100;
     }
 
-    double personalFinance::net_worth() /* return the net worth, which is the difference of assets and liabilities */
+    double personalFinance::get_net_worth() /* return the net worth, which is the difference of assets and liabilities */
+    {
+      return sum_assets - sum_liabilities;
+    }
+
+    void personalFinance::net_worth() /* calculate the net worth, which is the difference of assets and liabilities */
     {
       sum_assets = real_estate + checking_account + savings_account + retirement_account;
       sum_liabilities = mortgages + credit_card_debt + personal_loans + student_loans + auto_loans;
-      return sum_assets - sum_liabilities;
     }
 
     void personalFinance::budget()
     {
       cout<< "A possible budget to achieve your money goals includes:"<<endl;
-      cout<< "$"<<round(salary*0.4)<< " on needs such as rent, food, and other biils."<<endl;
-      cout<< "$"<<round(salary*0.4)<<" on savings accounts, investments, and mostly to tackle debt."<<endl;
-      cout<< "$"<<round(salary*0.2) <<" on any items that are not needed like eating out or a new video game."<<endl<<endl;
+      cout<< "$"<<round(salary*0.40)<< " on needs such as rent, food, and other biils."<<endl;
+      cout<< "$"<<round(salary*0.40)<<" on savings accounts, investments, and mostly to tackle debt."<<endl;
+      cout<< "$"<<round(salary*0.20) <<" on any items that are not needed like eating out or a new video game."<<endl<<endl;
     }
 
-    void personalFinance::current() const
+    void personalFinance::current()
     {
-      cout<<"Salary: $" << salary << endl;
-      cout<<"Assets: $" << sum_assets << endl;
-      cout<<"Liabilites: $"<< sum_liabilities << endl<<endl;
+      cout<<"Salary: $" << round(salary) << endl;
+      cout<<"Assets: $" << round(sum_assets) << endl;
+      cout<<"Liabilites: $"<< round(sum_liabilities) << endl<<endl;
     }
 
 

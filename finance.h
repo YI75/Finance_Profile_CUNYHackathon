@@ -7,9 +7,10 @@ namespace ibarra_tan_james{
         public:
         personalFinance();
         double round(double value);
-        double net_worth();
+        double get_net_worth();
+        void net_worth();
         void budget();
-        void current()  const;
+        void current();
         friend personalFinance operator+(const personalFinance& s1, const personalFinance& s2);
         void get_salary();
         void get_real_estate();

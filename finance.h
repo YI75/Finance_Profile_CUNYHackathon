@@ -10,7 +10,6 @@ namespace ibarra_tan_james{
         void budget const;
 
 
-
         private:
         //Assets
         double real_estate;
@@ -23,5 +22,6 @@ namespace ibarra_tan_james{
         double personal_loans;
         double student_loans;
         double auto_loans;
+        double yerrrr;
     }
 }
